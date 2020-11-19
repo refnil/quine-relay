@@ -9,6 +9,9 @@ let
 in pkgs.mkShell {
   buildInputs = with pkgs; [
     cmake
+    pkg-config
+    libglib
+
     groff
     bison
     flex
@@ -17,5 +20,11 @@ in pkgs.mkShell {
     ruby
     rustc
     scala
+    slang
+    gnu-smalltalk
+    mlton
+    tcsh
+    nodePackages.typescript
+    vala
   ] ++ compilers;
 }
